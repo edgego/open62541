@@ -636,7 +636,7 @@ if(NOT UA_FORCE_CPP AND (CMAKE_COMPILER_IS_GNUCC OR "x${CMAKE_C_COMPILER_ID}" ST
     check_add_cc_flag("-Wextra")    # More warnings
     check_add_cc_flag("-Wpedantic") # Standard compliance
     if(UA_FORCE_WERROR)
-        check_add_cc_flag("-Werror")    # All warnings are errors
+        check_add_cc_flag("-Wno-error")    # All warnings are errors
     endif()
 
     check_add_cc_flag("-Wno-static-in-inline") # Clang doesn't like the use of static inline methods inside static inline methods
